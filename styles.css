@@ -1,0 +1,62 @@
+/* Estilos básicos */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Contenedor del reloj */
+#container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+/* Reloj (canvas circular) */
+#myCanvas {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Números alrededor del reloj */
+.number {
+    position: absolute; /* Los números deben estar posicionados absolutamente dentro del contenedor */
+    color: red;
+    font-size: 18px;
+    transform: translate(-50%, -50%); /* Centrar el texto en su posición */
+    font-weight: bold;
+}
+
+
+/* Manecilla del cronómetro */
+#manecilla {
+    position: absolute;
+    width: 5px; /* Grosor de la manecilla */
+    height: 45%; /* Longitud de la manecilla */
+    background-color: orange;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform-origin: bottom center; /* Punto de rotación en la base */
+    transform: translate(-50%, -100%) rotate(0deg); /* Ajustar posición */
+}
+
+
+/* Botones */
+#controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
